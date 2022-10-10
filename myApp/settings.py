@@ -29,7 +29,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -149,10 +148,9 @@ DEFAULTS = {
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
-
 USE_I18N = True
 
+TIME_ZONE = "Asia/bangkok"
 USE_TZ = True
 
 CORS_ALLOW_ALL_ORIGINS = True
