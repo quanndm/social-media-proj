@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     "core",
     "myAuth",
-    "myBlog"
+    "myBlog",
+    "myMusicApp"
 ]
 
 MIDDLEWARE = [
