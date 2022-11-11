@@ -17,7 +17,8 @@ class Song(models.Model):
     file_url = models.FileField(upload_to="music", max_length=255, blank=True, null=True, validators=[FileExtensionValidator( ['mp3'] ) ])
     create_at = models.DateTimeField(auto_now_add=True)
     user_create = models.ForeignKey(User, blank=True, null=True, on_delete = models.CASCADE)
-    album = models.ForeignKey(Album, blank=True, null=True, on_delete= models.CASCADE)
+    album = models.ForeignKey(Album, related_name='songs',blank=True, null=True, on_delete= models.CASCADE)
+    image_song = models.ImageField(upload_to="music", null=True, blank=True)
     def __str__(self):
         return self.title
 

@@ -50,3 +50,6 @@ coverage.xml
 
 # example database
 drf_example
+
+#temporary files
+todo.txt
