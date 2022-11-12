@@ -16,6 +16,7 @@ from rest_framework.response import Response
 from django.contrib.auth.models import User
 from .models import Profile
 from myAuth.utility.validateUpdateProfile import validateUpdateProfile
+from myAuth.utility.validateEmail import isValidEmail
 #from .permissions import userPermissions
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.decorators import api_view,permission_classes,parser_classes
@@ -23,6 +24,8 @@ from rest_framework.parsers import MultiPartParser,FormParser
 from django.conf import settings
 from datetime import date
 from django.core.files.storage import default_storage
+from myApp.Utility import sendmail_forgot_pwd
+
 # Create your views here.
 class MyObtainTokenPairView(TokenObtainPairView):
     permission_classes = (AllowAny,)
@@ -150,7 +153,17 @@ def uploadAvatar(request, pk=None):
             return Response({"message": "Uploaded avatar success."}, status=status.HTTP_200_OK)
         except:
             return Response({"message": "Uploaded avatar fail."}, status=status.HTTP_400_BAD_REQUEST)
-            
-        
-        
 
+@api_view(['POST'])            
+def forgotPwd(request):
+    if request.method == 'POST':
+        email = request.data.get("email")
+        if email is None:
+            return Response({"message": "Email can not be null"}, status=status.HTTP_400_BAD_REQUEST)
+        if not isValidEmail(email):
+            return Response({"message": "Email is invalid"}, status=status.HTTP_400_BAD_REQUEST)
+        # send mail to user to reset password
+        # sendmail_forgot_pwd(email)
+        
+        return Response({"message": "If you have registered, you can receive an email to reset password"}, status=status.HTTP_200_OK)
+        

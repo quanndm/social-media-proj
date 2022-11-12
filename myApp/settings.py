@@ -147,6 +147,7 @@ DEFAULTS = {
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
+
 LANGUAGE_CODE = "en-us"
 
 USE_I18N = True
@@ -167,3 +168,10 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
