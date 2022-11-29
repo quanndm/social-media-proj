@@ -12,5 +12,5 @@ class AlbumSerializer(serializers.ModelSerializer):
     songs = SongSerializer(many=True)
     class Meta:
         model = Album
-        fields = ("pk","title","songs","create_at","user_create")
+        fields = ("pk","title","songs","image_album","create_at","user_create")
 
