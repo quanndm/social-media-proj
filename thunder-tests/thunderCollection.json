@@ -1,0 +1,23 @@
+[
+  {
+    "_id": "e1863449-7dcf-4a62-94e7-4e51f7ac7e7b",
+    "colName": "Auth",
+    "created": "2023-06-18T03:06:21.630Z",
+    "sortNum": 10000,
+    "folders": []
+  },
+  {
+    "_id": "9049c3d9-b0d0-4853-9261-3668c08a66e6",
+    "colName": "Blog",
+    "created": "2023-06-18T03:06:43.523Z",
+    "sortNum": 20000,
+    "folders": []
+  },
+  {
+    "_id": "620cf560-e963-41d4-ab6b-14226ba2a481",
+    "colName": "Music",
+    "created": "2023-06-18T03:07:01.479Z",
+    "sortNum": 30000,
+    "folders": []
+  }
+]
