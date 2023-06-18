@@ -51,6 +51,12 @@ coverage.xml
 # example database
 drf_example
 
-#temporary files
+# temporary files
 todo.txt
 infomail.txt
+
+# temporary folder
+media/album/*
+media/blog/*
+media/music/*
+media/profile_images/*
