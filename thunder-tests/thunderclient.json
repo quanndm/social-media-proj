@@ -1,1 +1,77 @@
-[]
+[
+  {
+    "_id": "36027509-8ae1-4fe6-a345-ab4c6b06fe84",
+    "colId": "e1863449-7dcf-4a62-94e7-4e51f7ac7e7b",
+    "containerId": "",
+    "name": "register",
+    "url": "{{url}}/api/auth/register/",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2023-06-18T03:16:22.218Z",
+    "modified": "2023-06-18T03:50:49.989Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"username\": \"usertest1\",\n    \"password\": \"@abc123456\",\n    \"password2\": \"@abc123456\",\n    \"email\": \"usertest1@mail.com\",\n    \"first_name\": \"usertest1\",\n    \"last_name\": \"\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "46f6100b-50c8-45db-9f56-572b805fbfcb",
+    "colId": "e1863449-7dcf-4a62-94e7-4e51f7ac7e7b",
+    "containerId": "",
+    "name": "login",
+    "url": "{{url}}/api/auth/login/",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2023-06-18T03:23:13.495Z",
+    "modified": "2023-06-18T03:54:08.133Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\r\n    \"username\": \"usertest1\",\r\n    \"password\": \"@abc123456\"\r\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "e2c2b4b5-0e50-4166-9313-c8d51e30a808",
+    "colId": "e1863449-7dcf-4a62-94e7-4e51f7ac7e7b",
+    "containerId": "",
+    "name": "refresh token",
+    "url": "{{url}}/api/auth/login/refresh/",
+    "method": "POST",
+    "sortNum": 40000,
+    "created": "2023-06-18T03:29:58.429Z",
+    "modified": "2023-06-18T03:31:50.234Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\r\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY4NzE0NTMyOCwiaWF0IjoxNjg3MDU4OTI4LCJqdGkiOiJmNWY2ZmZlMzhmMmE0YmRkOTdlOWMzOGZlNTg3ZWQ4YyIsInVzZXJfaWQiOjEsInVzZXJuYW1lIjoidXNlcnRlc3QxIn0.kZhSLXwCWo06RUaa4puTZkGvZ5wkZqlBXZspgNt4fQU\"\r\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "bce80358-bacb-429b-b5ce-f76a591f98ff",
+    "colId": "e1863449-7dcf-4a62-94e7-4e51f7ac7e7b",
+    "containerId": "",
+    "name": "get all users",
+    "url": "{{url}}/api/auth/user_profiles",
+    "method": "GET",
+    "sortNum": 50000,
+    "created": "2023-06-18T03:32:40.827Z",
+    "modified": "2023-06-18T03:49:32.263Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg3MDYwNDQ4LCJpYXQiOjE2ODcwNjAxNDgsImp0aSI6ImFlMWZhODQzODFlNDQ5YzlhYWQ0MmJmOTg3Mjk2ZTFiIiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJzdXBlcnVzZXIifQ.boLTAcp9Gf6mlDqQFLsxrrrZcJdS-J-iZdVm24yeD_Y"
+    },
+    "tests": []
+  }
+]

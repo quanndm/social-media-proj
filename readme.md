@@ -8,5 +8,6 @@ pip install -r ./requirements.txt
 python manage.py makemigrations
 python manage.py migrate
 ```
+# In django-proj-api\myAuth\serializers.py, line 37 - 38, comment them and create a super account, after create comment again
 # start project 
 python.exe .\manage.py runserver

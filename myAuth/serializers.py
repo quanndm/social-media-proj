@@ -30,10 +30,12 @@ class RegisterSerializer(serializers.ModelSerializer):
         }
     def validate(self, attrs):
         if attrs['password'] != attrs['password2']:
-            raise serializers.ValidationError({"password": "Password fields didn't match."})
+            raise serializers.ValidationError({"password": "Password fields didn't match."})         
 
         return attrs
     def create(self, validated_data):
+        if validated_data['username'] in ["admin","superadmin", "superuser"]:
+            raise serializers.ValidationError({"username": "Can not use 'admin' or 'superuser' or 'superadmin' for username"})
         user = User.objects.create(
             username=validated_data['username'],
             email=validated_data['email'],

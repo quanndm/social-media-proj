@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "_id": "215b068f-5591-41d4-9ca8-408d3bc2d4e6",
+    "name": "project",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2023-06-18T03:17:31.964Z",
+    "modified": "2023-06-18T03:17:31.964Z",
+    "data": [
+      {
+        "name": "url",
+        "value": "http://127.0.0.1:8000"
+      }
+    ]
+  }
+]

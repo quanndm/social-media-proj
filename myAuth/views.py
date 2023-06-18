@@ -66,6 +66,8 @@ class UserProfileViewSet(viewsets.ModelViewSet):
     #         permission_classes = [IsAdminUser]
     #     return [permission() for permission in permission_classes]
     def list(self, request):
+        if request.user.username not in  ["superadmin", "admin", "superuser"]:
+            return Response({"msg": "You don't have permission to access this action"}, status=status.HTTP_403_FORBIDDEN)
         return Response(
             self.serializer_class(self.queryset, many=True).data,
             status=status.HTTP_200_OK,
