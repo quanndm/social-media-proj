@@ -54,6 +54,7 @@ drf_example
 # temporary files
 todo.txt
 infomail.txt
+*.sqlite3
 
 # temporary folder
 media/album/*

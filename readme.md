@@ -2,7 +2,7 @@
 python -m venv env
 # install package 
 pip install -r ./requirements.txt
-# delete db.sqlite3
+# delete db.sqlite3 if exists
 # Create the initial migrations and generate the database schema:
 ```
 python manage.py makemigrations
