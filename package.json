@@ -1,0 +1,14 @@
+{
+  "name": "social-media-proj",
+  "version": "1.0.0",
+  "description": "project social media - django - nextjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": ".\\server\\env\\Scripts\\activate && cd .\\server && python.exe .\\manage.py runserver",
+    "frontend-dev": "cd .\\frontend && npm run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
